@@ -61,10 +61,12 @@
 /* -------------------- БЛОК 3: ЦИТАТА-ПЕРЕКЛЮЧАТЕЛЬ (ЦЕНТР) -------------------- */
 .quote-switcher {
     position: relative;
-    z-index: 5; /* Над кодом 404 */
+    z-index: 5;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 30px; 
+    /* Добавляем центрирование и отступы */
+    padding: 20px;
 }
 
 .quote-link {
@@ -73,26 +75,20 @@
     color: #121212;
     text-decoration: none;
     transition: color 0.3s;
-}
-
-.quote-link:hover {
-    color: #ff0000; /* Подсветка при наведении */
-}
-
-
-/* -------------------- БЛОК 4: FOOTER (СИМВОЛ) -------------------- */
-.manifest-footer {
-    display: flex;
-    gap: 40px;
-    padding-bottom: 5vh;
-}
-
-.heart-symbol-block {
+    /* Делаем ссылку контейнером для цитаты и сердца */
     display: flex;
     align-items: center;
-    font-size: 1.5em;
-    font-weight: 600;
+    justify-content: center; /* Центрируем весь блок */
+    gap: 15px; /* Пространство между цитатой и сердцем */
 }
+/* Стилизация сердца, чтобы оно не было обычным текстом */
+.heart-symbol-link {
+    font-size: 1.2em; 
+    font-weight: 900;
+    color: #ff0000; /* Цвет для выделения */
+    white-space: nowrap; /* Не переносить на новую строку */
+}
+
 
 .heart-icon {
     font-size: 1.8em;
@@ -101,4 +97,5 @@
 
 .heart-text {
     /* Дополнительные стили, если нужно выделить */
+
 }
