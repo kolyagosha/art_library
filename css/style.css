@@ -1,0 +1,104 @@
+/* Стили для страницы-заставки (Landing Page) */
+
+.landing-page-body {
+    /* Светлый фон и центрирование */
+    background-color: #f0f0f0; /* Светлый фон (чистый лист) */
+    color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* -------------------- БЛОК 1: HEADER (ПРИГЛАШЕНИЕ) -------------------- */
+.welcome-header {
+    padding-top: 5vh;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    max-width: 80%;
+}
+
+.welcome-ua, .welcome-en {
+    margin: 5px 0;
+}
+
+/* -------------------- БЛОК 2: МАНИФЕСТ (404) -------------------- */
+
+.error-manifest {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1; /* Очень бледный, фоновый элемент */
+    z-index: 1; /* Фон */
+}
+
+.error-code {
+    font-size: 15em; /* Очень крупный */
+    font-weight: 900;
+    color: #FF0000; /* Красный, как символ ошибки */
+    margin: 0;
+    position: relative;
+    /* Здесь будет магия перечеркивания! */
+}
+
+/* МАГИЯ ПЕРЕЧЕРКИВАНИЯ (чистый CSS): */
+.error-code::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 15px; /* Толщина черты */
+    background-color: #121212; /* Цвет перечеркивания */
+    transform: rotate(-10deg); /* Наклон черты */
+    opacity: 0.8;
+}
+
+/* -------------------- БЛОК 3: ЦИТАТА-ПЕРЕКЛЮЧАТЕЛЬ (ЦЕНТР) -------------------- */
+.quote-switcher {
+    position: relative;
+    z-index: 5; /* Над кодом 404 */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.quote-link {
+    font-size: 2em;
+    font-weight: bold;
+    color: #121212;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.quote-link:hover {
+    color: #ff0000; /* Подсветка при наведении */
+}
+
+
+/* -------------------- БЛОК 4: FOOTER (СИМВОЛ) -------------------- */
+.manifest-footer {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 5vh;
+}
+
+.heart-symbol-block {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.heart-icon {
+    font-size: 1.8em;
+    margin-right: 5px;
+}
+
+.heart-text {
+    /* Дополнительные стили, если нужно выделить */
+}
