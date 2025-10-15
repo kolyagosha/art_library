@@ -365,3 +365,49 @@ a {
     margin-bottom: 10px;
 }
 
+/* ======================================================= */
+/* УНИКАЛЬНЫЙ СТИЛЬ ЛЮДОВИКА XIV: КОРОЛЕВСКИЙ ПОРТРЕТ */
+/* ======================================================= */
+
+.louis-bg {
+    background-color: #3d051f; /* Глубокий королевский бордовый */
+    color: #f0e68c; /* Золотистый/светлый текст */
+    font-family: 'Georgia', serif; /* Более официальный шрифт */
+}
+
+.louis-bg .page-title, .louis-bg h2 {
+    color: #ffffff; /* Чисто белый для заголовков */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid #f0e68c; /* Золотистая черта */
+    padding-bottom: 5px;
+}
+
+.ornate-text-box {
+    border: 5px double #f0e68c; /* Двойная золотистая рамка */
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.3); /* Полупрозрачный фон для текста */
+    box-shadow: 0 0 15px rgba(240, 230, 140, 0.8); /* Золотое свечение */
+    margin: 30px 0;
+}
+
+.portrait.left-float {
+    float: left; /* Портрет слева для разнообразия */
+    width: 300px;
+    height: auto;
+    margin: 0 30px 15px 0;
+    border: 5px solid #f0e68c; /* Золотистая рамка */
+    box-shadow: 0 0 10px rgba(240, 230, 140, 0.8);
+}
+
+.historical-document {
+    font-family: 'Courier New', monospace; /* Имитация старого документа */
+    font-size: 0.9em;
+    background-color: #f5f5dc; /* Бежевый фон бумаги */
+    color: #121212; /* Черный текст */
+    padding: 15px;
+    border: 1px solid #999;
+    margin: 20px 0;
+    white-space: pre-wrap; 
+    text-align: left;
+}
+
