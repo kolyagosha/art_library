@@ -155,12 +155,13 @@ a {
 }
 
 /* ======================================================= */
-/* СТИЛИ СТАРТОВОЙ СТРАНИЦЫ (LANDING/INDEX) */
+/* СТИЛИ СТАРТОВОЙ СТРАНИЦЫ (INDEX.HTML / LANDING) */
 /* ======================================================= */
 
 .landing-page-body {
     background-color: #f0f0f0; /* Светлый фон */
     color: #121212;
+    /* Устранение конфликта Flexbox: */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -179,7 +180,7 @@ a {
     flex-grow: 1; 
     display: flex; 
     flex-direction: column; 
-    justify-content: center; 
+    justify-content: center; /* Центрирует цитату по вертикали */
     align-items: center; 
     width: 100%; 
     position: relative; 
