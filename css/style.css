@@ -154,3 +154,95 @@ a {
     opacity: 1;
 }
 
+/* ======================================================= */
+/* СТИЛИ СТАРТОВОЙ СТРАНИЦЫ (LANDING/INDEX) */
+/* ======================================================= */
+
+.landing-page-body {
+    background-color: #f0f0f0; /* Светлый фон */
+    color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+}
+.welcome-header { 
+    padding-top: 5vh; 
+    font-size: 1.2em; 
+    font-weight: 300; 
+}
+.manifest-content { 
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    position: relative; 
+}
+
+/* КОД 404 И ПЕРЕЧЕРКИВАНИЕ */
+.error-manifest { 
+    position: absolute; 
+    opacity: 0.1; 
+    user-select: none; 
+    z-index: 1; 
+}
+.error-code { 
+    font-size: 15em; 
+    font-weight: 900; 
+    color: #FF0000; 
+    margin: 0; 
+    position: relative; 
+}
+.error-code::after { 
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    width: 100%; 
+    height: 15px; 
+    background-color: #121212; 
+    transform: rotate(-10deg); 
+    opacity: 0.8; 
+}
+
+/* ЦИТАТА И СЕРДЦЕ */
+.quote-switcher { 
+    position: relative; 
+    z-index: 5; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 30px; 
+}
+.quote-link {
+    font-size: 2em;
+    font-weight: bold;
+    color: #121212;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+.quote-link:hover { 
+    color: #ff0000; 
+    text-decoration: underline; 
+}
+.heart-symbol-link {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #ff0000;
+    white-space: nowrap;
+}
+.manifest-footer { 
+    padding-bottom: 5vh; 
+    opacity: 0.7; 
+}
+
+
