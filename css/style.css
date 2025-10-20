@@ -776,4 +776,19 @@ html {
 @font-face {
     font-family: 'Arial';
     font-display: swap;
+
+}
+
+/* Стили для ЛОГОТИПА (1.png) */
+.project-logo {
+    max-height: 80px; /* Ограничиваем высоту, чтобы не был слишком огромным */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Переключатель языков (остается без изменений, но убедимся, что он центрирован) */
+.language-switcher {
+    font-size: 1.1em;
+    font-weight: bold;
+    /* ... остальные стили для ссылок ... */
 }
