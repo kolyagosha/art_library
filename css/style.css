@@ -792,3 +792,61 @@ html {
     font-weight: bold;
     /* ... остальные стили для ссылок ... */
 }
+
+
+/* ======================================================= */
+/* УНИКАЛЬНЫЙ СТИЛЬ КАМАРГО: РОКОКО И БАЛЕТ */
+/* ======================================================= */
+
+.camargo-bg {
+    background-color: #fcf8f7; /* Почти белый, пудровый фон */
+    color: #333333;
+    font-family: 'Georgia', serif; 
+}
+
+/* Заголовки, чтобы были заметны на светлом фоне */
+.camargo-bg .page-title, 
+.camargo-bg h2,
+.camargo-bg h3 {
+    color: #4a148c; /* Глубокий фиолетовый */
+    text-shadow: none;
+    border-bottom: 2px solid #ce93d8; /* Бледно-пурпурная линия */
+    padding-bottom: 10px;
+}
+
+/* Стили для рамки-цитаты (Вольтер) */
+.camargo-bg .spotlight-quote {
+    color: #4a148c;
+    border-left: 4px solid #ce93d8; 
+    background: rgba(74, 20, 140, 0.05); /* Очень легкий фиолетовый налет */
+    font-style: normal; /* Сбрасываем курсив, чтобы цитата была чистой */
+}
+
+/* Стили для списка (Плитки/Скандал) */
+.camargo-bg .gossip-list li::before {
+    color: #ce93d8; /* Делаем маркеры под цвет темы */
+}
+
+/* Стили для рамки картины */
+.camargo-bg .spotlight-frame {
+    box-shadow: 0 0 40px rgba(74, 20, 140, 0.3), /* Фиолетовое свечение */
+                0 0 15px rgba(255, 255, 255, 0.8),
+                0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 8px solid #ffffff;
+}
+
+/* Стили для музыкального плеера */
+.camargo-bg .music-player {
+    background: rgba(74, 20, 140, 0.03); /* Почти прозрачный */
+    color: #121212;
+    border: 1px solid #ce93d8;
+}
+
+/* Стили для обрамленного текста (ornate-text-box) */
+.camargo-bg .ornate-text-box {
+    border: 5px double #ce93d8; /* Двойная рамка под цвет Рококо */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(206, 147, 216, 0.7);
+}
+
