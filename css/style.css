@@ -228,15 +228,15 @@ img:not([src])::after {
 
 .option-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 253, 208, 0.4);
 }
 
 .read-option { 
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #fdf6e3 0%, #fffdd0 100%);
 }
 
 .read-option:hover {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    background: linear-gradient(135deg, #fffdd0 0%, #fdf6e3 100%);
 }
 
 .video-option { 
@@ -849,6 +849,7 @@ html {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 15px rgba(206, 147, 216, 0.7);
 }
+
 
 
 
