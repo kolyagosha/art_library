@@ -799,7 +799,7 @@ html {
 /* ======================================================= */
 
 .camargo-bg {
-    background-color: #fcf8f7; /* Почти белый, пудровый фон */
+    background-color: #FDF6E3; /* Почти белый, пудровый фон */
     color: #333333;
     font-family: 'Georgia', serif; 
 }
@@ -849,4 +849,5 @@ html {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 15px rgba(206, 147, 216, 0.7);
 }
+
 
