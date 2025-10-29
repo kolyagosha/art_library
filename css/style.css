@@ -1010,6 +1010,134 @@ html {
 }
 
 
+/* ======================================================= */
+/* КНОПКИ "ПОДІЛИТИСЯ" В ФУТЕРІ */
+/* ======================================================= */
+
+.social-footer {
+    margin-top: auto;
+    padding: 30px 5%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-footer p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #f0f0f0;
+}
+
+/* Контейнер для кнопок */
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Базовий стиль кнопки */
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.share-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.share-btn:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.share-btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.share-btn:active {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Кольори для кожної соцмережі */
+.share-btn.facebook {
+    background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%);
+}
+
+.share-btn.twitter {
+    background: linear-gradient(135deg, #1da1f2 0%, #0c85d0 100%);
+}
+
+.share-btn.telegram {
+    background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
+}
+
+.share-btn.viber {
+    background: linear-gradient(135deg, #7360f2 0%, #5a4bc4 100%);
+}
+
+.share-btn.whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+}
+
+.share-btn.email {
+    background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%);
+}
+
+/* Іконки через Unicode symbols */
+.icon-facebook::before { content: "f"; font-weight: bold; }
+.icon-twitter::before { content: "𝕏"; }
+.icon-telegram::before { content: "✈"; }
+.icon-viber::before { content: "☎"; }
+.icon-whatsapp::before { content: "💬"; }
+.icon-email::before { content: "✉"; }
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .share-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .share-buttons {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .share-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .share-buttons {
+        gap: 10px;
+    }
+}
 
 
 
