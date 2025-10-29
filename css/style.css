@@ -198,7 +198,7 @@ img:not([src])::after {
 /* ПАНЕЛЬ ВЫБОРА (ОПЦИИ) */
 .options-panel {
     position: absolute;
-    bottom: -120px;
+    bottom: -150px;
     left: 50%;
     transform: translateX(-50%);
     width: 280px;
@@ -302,7 +302,7 @@ img:not([src])::after {
 }
 
 .photo-key-container:hover .options-panel {
-    bottom: -110px;
+    bottom: -140px;
     opacity: 1;
     pointer-events: all;
 }
@@ -1138,6 +1138,7 @@ html {
         gap: 10px;
     }
 }
+
 
 
 
