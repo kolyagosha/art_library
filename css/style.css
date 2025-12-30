@@ -1248,7 +1248,61 @@ html {
 .photo-card.vangogh-card:hover {
     box-shadow: 0 0 15px rgba(244, 196, 48, 0.4); /* Мягкое желтое сияние вокруг фото */
 }
+    /* Специальные стили для Ван Гога */
+.intro-accent { font-size: 1.2rem; font-weight: bold; color: #102a54; }
+.gold-text { color: #f4c430; text-shadow: 1px 1px 0px #000; }
+
+.quote-box {
+    border-left: 4px solid #f4c430;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    background: rgba(244, 196, 48, 0.1);
 }
+
+.scientific-note {
+    background: #102a54;
+    color: #f4c430;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(16, 42, 84, 0.4);
+    margin: 20px 0;
+}
+
+.scientific-note ul { list-style: "✧ "; padding-left: 20px; }
+
+.cypress-text {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #2e4a39; /* Темно-зеленый цвет кипариса */
+    font-family: 'Georgia', serif;
+}
+
+.gold-glow {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #f4c430, transparent);
+    margin: 30px 0;
+}
+
+.btn-animate-vGogh {
+    background: #f4c430;
+    color: #102a54;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(244, 196, 48, 0.5);
+}
+
+.btn-animate-vGogh:hover {
+    transform: scale(1.05);
+    background: #102a54;
+    color: #f4c430;
+}
+}
+
 
 
 
