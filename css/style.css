@@ -1163,7 +1163,55 @@ html {
     .share-buttons {
         gap: 10px;
     }
+    /* ======================================================= */
+/* ТЕМА ВАН ГОГА (Синий и Желтый) */
+/* ======================================================= */
+
+/* Фон для всей страницы */
+.vangogh-bg {
+    background-color: #fdfbf7; /* Светлый кремовый, чтобы текст читался */
 }
+
+/* Хедер Ван Гога */
+.vangogh-bg .content-header {
+    background-color: #102a54 !important; /* Глубокий синий */
+    border-bottom: 3px solid #f4c430;   /* Ярко-желтая линия */
+}
+
+.vangogh-bg .content-header .page-title {
+    color: #f4c430 !important; /* Желтый заголовок */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Переключатель языков в хедере */
+.vangogh-bg .content-header .language-switcher a,
+.vangogh-bg .content-header .language-switcher .separator {
+    color: #f4c430 !important;
+}
+
+.vangogh-bg .content-header .language-switcher a.active {
+    background: rgba(244, 196, 48, 0.2);
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+/* Акценты в тексте (заголовки h2) */
+.vangogh-bg h2 {
+    color: #102a54;
+    border-bottom: 2px solid #f4c430;
+    display: inline-block;
+}
+
+/* Рамка для "Турбулентности" */
+.turbulence-box {
+    border-left: 5px solid #f4c430;
+    background: rgba(16, 42, 84, 0.05);
+    padding: 15px;
+    font-style: italic;
+    margin: 20px 0;
+}
+}
+
 
 
 
