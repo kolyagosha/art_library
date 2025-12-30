@@ -1163,145 +1163,79 @@ html {
     .share-buttons {
         gap: 10px;
     }
-    /* ======================================================= */
-/* ТЕМА ВАН ГОГА (Синий и Желтый) */
+   /* ======================================================= */
+/* ФИНАЛЬНЫЙ БЛОК ВАН ГОГА (UA) */
 /* ======================================================= */
 
-/* Фон для всей страницы */
-.vangogh-bg {
-    background-color: #fdfbf7; /* Светлый кремовый, чтобы текст читался */
-}
+/* Фон страницы */
+.vangogh-bg { background-color: #fdfbf7; color: #102a54; }
 
-/* Хедер Ван Гога */
+/* Хедер: синий фон, желтый текст */
 .vangogh-bg .content-header {
-    background-color: #102a54 !important; /* Глубокий синий */
-    border-bottom: 3px solid #f4c430;   /* Ярко-желтая линия */
+    background-color: #102a54 !important;
+    border-bottom: 3px solid #f4c430;
 }
-
-.vangogh-bg .content-header .page-title {
-    color: #f4c430 !important; /* Желтый заголовок */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-/* Переключатель языков в хедере */
-.vangogh-bg .content-header .language-switcher a,
-.vangogh-bg .content-header .language-switcher .separator {
+.vangogh-bg .page-title, 
+.vangogh-bg .language-switcher a, 
+.vangogh-bg .language-switcher .separator {
     color: #f4c430 !important;
 }
 
-.vangogh-bg .content-header .language-switcher a.active {
-    background: rgba(244, 196, 48, 0.2);
-    border-radius: 4px;
-    padding: 2px 5px;
-}
+/* Элементы структуры текста */
+.vangogh-bg .text-block { margin-bottom: 30px; line-height: 1.6; }
 
-/* Акценты в тексте (заголовки h2) */
-.vangogh-bg h2 {
-    color: #102a54;
-    border-bottom: 2px solid #f4c430;
-    display: inline-block;
-}
-
-/* Рамка для "Турбулентности" */
-.turbulence-box {
+/* Линия-разделитель слева (для акцента на ХИТ) */
+.hit-accent {
     border-left: 5px solid #f4c430;
-    background: rgba(16, 42, 84, 0.05);
-    padding: 15px;
-    font-style: italic;
+    padding-left: 20px;
     margin: 20px 0;
-}
-    /* Оверлей при наведении для Ван Гога */
-.vangogh-overlay {
-    background: rgba(16, 42, 84, 0.9) !important; /* Глубокий синий фон при наведении */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Заголовок внутри карточки */
-.vangogh-title {
-    color: #f4c430; /* Золотой */
-    font-size: 1.2rem;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Подзаголовк (название картины) */
-.vangogh-subtitle {
-    color: #ffffff;
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-/* Текст загадки для Ван Гога */
-.vangogh-overlay .riddle-text {
-    color: #ffffff;
-    border-top: 1px solid rgba(244, 196, 48, 0.5);
-    padding-top: 10px;
-}
-
-/* Эффект свечения самой фотографии при наведении */
-.photo-card.vangogh-card:hover {
-    box-shadow: 0 0 15px rgba(244, 196, 48, 0.4); /* Мягкое желтое сияние вокруг фото */
-}
-    /* Специальные стили для Ван Гога */
-.intro-accent { font-size: 1.2rem; font-weight: bold; color: #102a54; }
-.gold-text { color: #f4c430; text-shadow: 1px 1px 0px #000; }
-
-.quote-box {
-    border-left: 4px solid #f4c430;
-    padding: 10px 20px;
-    margin: 20px 0;
-    font-style: italic;
     background: rgba(244, 196, 48, 0.1);
 }
 
-.scientific-note {
-    background: #102a54;
-    color: #f4c430;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(16, 42, 84, 0.4);
-    margin: 20px 0;
-}
-
-.scientific-note ul { list-style: "✧ "; padding-left: 20px; }
-
-.cypress-text {
-    font-size: 1.1rem;
-    text-align: center;
-    color: #2e4a39; /* Темно-зеленый цвет кипариса */
-    font-family: 'Georgia', serif;
-}
-
-.gold-glow {
-    height: 2px;
-    background: linear-gradient(to right, transparent, #f4c430, transparent);
+/* Линия-разделитель справа (для Кипариса) */
+.cypress-side {
+    border-right: 5px solid #102a54;
+    padding-right: 20px;
+    text-align: right;
     margin: 30px 0;
 }
 
-.btn-animate-vGogh {
+/* Блок ТУРБУЛЕНТНОСТЬ (темная карточка) */
+.science-card {
+    background: #102a54;
+    color: #f4c430;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(16, 42, 84, 0.3);
+    margin: 40px 0;
+}
+.science-card h2 { color: #ffffff; border-bottom: 1px solid #f4c430; padding-bottom: 10px; }
+.science-card ul { list-style: "✧ "; padding-left: 20px; color: #ffffff; }
+
+/* Финальная цитата под линией */
+.final-quote-block {
+    text-align: center;
+    border-top: 1px solid #f4c430;
+    border-bottom: 1px solid #f4c430;
+    padding: 20px 0;
+    margin: 40px 0;
+    font-style: italic;
+}
+
+/* Кнопка "Оживить" */
+.v-gogh-btn {
+    display: inline-block;
     background: #f4c430;
     color: #102a54;
     padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
     border-radius: 50px;
-    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(244, 196, 48, 0.5);
+}
+.v-gogh-btn:hover { transform: scale(1.1); background: #ffffff; }
 }
 
-.btn-animate-vGogh:hover {
-    transform: scale(1.05);
-    background: #102a54;
-    color: #f4c430;
-}
-}
 
 
 
