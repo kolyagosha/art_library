@@ -1140,3 +1140,153 @@ html {
         padding-right: 0;
     }
 }
+
+
+/* ======================================================= */
+/* СТИЛІ ДЛЯ СОЦІАЛЬНИХ МЕРЕЖ (FOOTER) */
+/* ======================================================= */
+
+.social-footer {
+    margin-top: auto;
+    padding: 40px 5%;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.social-footer p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #f0f0f0;
+}
+
+/* Контейнер кнопок */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Базовий стиль кнопки */
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.social-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Іконки */
+.social-btn::before {
+    font-size: 1.3em;
+}
+
+/* VIBER - Фіолетовий */
+.social-btn.viber {
+    background: linear-gradient(135deg, #665CAC 0%, #7360b3 100%);
+}
+
+.social-btn.viber:hover {
+    background: linear-gradient(135deg, #7360b3 0%, #8470c4 100%);
+    border-color: #9f8fd6;
+}
+
+/* TELEGRAM - Синій */
+.social-btn.telegram {
+    background: linear-gradient(135deg, #0088cc 0%, #0099dd 100%);
+}
+
+.social-btn.telegram:hover {
+    background: linear-gradient(135deg, #0099dd 0%, #00aaee 100%);
+    border-color: #33bbee;
+}
+
+/* FACEBOOK - Темно-синій */
+.social-btn.facebook {
+    background: linear-gradient(135deg, #1877f2 0%, #3b5998 100%);
+}
+
+.social-btn.facebook:hover {
+    background: linear-gradient(135deg, #3b5998 0%, #4c69ba 100%);
+    border-color: #5b7bcc;
+}
+
+/* КОПІЮВАТИ - Золотистий */
+.social-btn.copy {
+    background: linear-gradient(135deg, #f4c430 0%, #d4af37 100%);
+    color: #1a1209;
+}
+
+.social-btn.copy:hover {
+    background: linear-gradient(135deg, #ffda44 0%, #f4c430 100%);
+    border-color: #ffed4e;
+}
+
+/* Повідомлення про копіювання */
+.copy-notification {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+    font-weight: 600;
+    font-size: 1em;
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.copy-notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-btn {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .social-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
