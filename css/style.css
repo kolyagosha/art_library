@@ -1156,137 +1156,142 @@ html {
 }
 
 .social-footer p {
-    margin-bottom: 20px;
-    font-size: 1.1em;
+    margin-bottom: 25px;
+    font-size: 1.2em;
     color: #f0f0f0;
+    font-weight: 500;
 }
 
 /* Контейнер кнопок */
-.social-links {
+.share-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 /* Базовий стиль кнопки */
-.social-btn {
+.share-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-size: 1em;
-    font-weight: 600;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
     text-decoration: none;
-    color: #fff;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
 }
 
-.social-btn:hover {
-    transform: translateY(-3px) scale(1.05);
+.share-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.share-btn:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.share-btn:hover {
+    transform: translateY(-5px) scale(1.1);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-.social-btn:active {
-    transform: translateY(-1px) scale(1.02);
+.share-btn:active {
+    transform: translateY(-2px) scale(1.05);
 }
 
-/* Іконки */
-.social-btn::before {
-    font-size: 1.3em;
+/* Іконки (спани) */
+.share-btn span {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* VIBER - Фіолетовий */
-.social-btn.viber {
-    background: linear-gradient(135deg, #665CAC 0%, #7360b3 100%);
+/* FACEBOOK - Синій */
+.share-btn.facebook {
+    background: linear-gradient(135deg, #1877f2 0%, #0e5fc7 100%);
 }
 
-.social-btn.viber:hover {
-    background: linear-gradient(135deg, #7360b3 0%, #8470c4 100%);
-    border-color: #9f8fd6;
+.share-btn.facebook:hover {
+    background: linear-gradient(135deg, #0e5fc7 0%, #0a4da3 100%);
+}
+
+.icon-facebook::before {
+    content: '📘';
+    font-size: 28px;
+}
+
+/* TWITTER - Блакитний */
+.share-btn.twitter {
+    background: linear-gradient(135deg, #1DA1F2 0%, #0d8bd9 100%);
+}
+
+.share-btn.twitter:hover {
+    background: linear-gradient(135deg, #0d8bd9 0%, #0a6db0 100%);
+}
+
+.icon-twitter::before {
+    content: '🐦';
+    font-size: 26px;
 }
 
 /* TELEGRAM - Синій */
-.social-btn.telegram {
-    background: linear-gradient(135deg, #0088cc 0%, #0099dd 100%);
+.share-btn.telegram {
+    background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
 }
 
-.social-btn.telegram:hover {
-    background: linear-gradient(135deg, #0099dd 0%, #00aaee 100%);
-    border-color: #33bbee;
+.share-btn.telegram:hover {
+    background: linear-gradient(135deg, #006699 0%, #004d75 100%);
 }
 
-/* FACEBOOK - Темно-синій */
-.social-btn.facebook {
-    background: linear-gradient(135deg, #1877f2 0%, #3b5998 100%);
+.icon-telegram::before {
+    content: '✈️';
+    font-size: 26px;
 }
 
-.social-btn.facebook:hover {
-    background: linear-gradient(135deg, #3b5998 0%, #4c69ba 100%);
-    border-color: #5b7bcc;
+/* VIBER - Фіолетовий */
+.share-btn.viber {
+    background: linear-gradient(135deg, #665CAC 0%, #59478a 100%);
 }
 
-/* КОПІЮВАТИ - Золотистий */
-.social-btn.copy {
-    background: linear-gradient(135deg, #f4c430 0%, #d4af37 100%);
-    color: #1a1209;
+.share-btn.viber:hover {
+    background: linear-gradient(135deg, #59478a 0%, #4a3870 100%);
 }
 
-.social-btn.copy:hover {
-    background: linear-gradient(135deg, #ffda44 0%, #f4c430 100%);
-    border-color: #ffed4e;
+.icon-viber::before {
+    content: '📱';
+    font-size: 26px;
 }
 
-/* Повідомлення про копіювання */
-.copy-notification {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
-    font-weight: 600;
-    font-size: 1em;
-    z-index: 10000;
-    opacity: 0;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+/* WHATSAPP - Зелений */
+.share-btn.whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
 }
 
-.copy-notification.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+.share-btn.whatsapp:hover {
+    background: linear-gradient(135deg, #1da851 0%, #128c3d 100%);
 }
 
-/* Адаптивність */
-@media (max-width: 768px) {
-    .social-links {
-        gap: 10px;
-    }
-    
-    .social-btn {
-        padding: 10px 18px;
-        font-size: 0.9em;
-    }
+.icon-whatsapp::before {
+    content: '💬';
+    font-size: 26px;
 }
 
-@media (max-width: 480px) {
-    .social-links {
-        flex-direction: column;
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
-    }
-    
-    .social-btn {
-        width: 100%;
-        justify-content: center;
-    }
-}
+/* EMAIL - Сірий */
+.share-btn.email
