@@ -198,7 +198,7 @@ img:not([src])::after {
 /* ПАНЕЛЬ ВЫБОРА (ОПЦИИ) */
 .options-panel {
     position: absolute;
-    bottom: -150px;
+    bottom: -120px;
     left: 50%;
     transform: translateX(-50%);
     width: 280px;
@@ -302,7 +302,7 @@ img:not([src])::after {
 }
 
 .photo-key-container:hover .options-panel {
-    bottom: -140px;
+    bottom: -110px;
     opacity: 1;
     pointer-events: all;
 }
@@ -960,32 +960,6 @@ html {
     }
 } 
 
-/* ======================================================= */
-/* ПЕРЕОПРЕДЕЛЕНИЕ СТИЛЕЙ ХЕДЕРА ДЛЯ СТРАНИЦЫ КАМАРГО */
-/* ======================================================= */
-
-/* 1. Изменяем цвет главного заголовка в шапке */
-.camargo-bg .content-header .page-title {
-    /* Новый, более яркий цвет для заголовка, чтобы выделить его */
-    color: #d81b60; /* Насыщенный малиновый/бордовый */
-    /* Убедимся, что у него нет линии и отступов, как у h2/h3 в теле */
-    border-bottom: none; 
-    padding-bottom: 0;
-}
-
-/* 2. Оформляем переключатель языка (тоже в хедере) */
-.camargo-bg .content-header .language-switcher a,
-.camargo-bg .content-header .language-switcher .separator {
-    color: #d81b60; /* Используем тот же акцентный цвет */
-    opacity: 0.9;
-}
-
-/* 3. Активная ссылка в переключателе */
-.camargo-bg .content-header .language-switcher a.active {
-    /* Активный элемент будет выделяться на светлом фоне */
-    color: #4a148c; /* Возвращаем к оригинальному глубокому фиолетовому */
-    background: rgba(216, 27, 96, 0.1); /* Легкий малиновый фон */
-}
 
 /* ======================================================= */
 /* СТИЛИ ДЛЯ ХЕДЕРА И ЛОГОТИПОВ */
@@ -1035,213 +1009,134 @@ html {
     }
 }
 
-
 /* ======================================================= */
-/* КНОПКИ "ПОДІЛИТИСЯ" В ФУТЕРІ */
+/* УНІКАЛЬНИЙ СТИЛЬ ВАН ГОГА: ЗОРЯНА НІЧ */
 /* ======================================================= */
 
-.social-footer {
-    margin-top: auto;
-    padding: 30px 5%;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.social-footer p {
-    margin-bottom: 20px;
-    font-size: 1.1em;
+.vangogh-bg {
+    background-color: #1a2332;
+    background-image: linear-gradient(135deg, #1a2332 0%, #2d3e50 50%, #102a54 100%);
     color: #f0f0f0;
 }
 
-/* Контейнер для кнопок */
-.share-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.vangogh-bg .page-title,
+.vangogh-bg h2,
+.vangogh-bg h3 {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    border-bottom: 3px solid #4a90e2;
 }
 
-/* Базовий стиль кнопки */
-.share-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+/* Акцентний блок "Хіт" */
+.hit-accent {
+    border-left: 6px solid #ffd700;
+    background: rgba(255, 215, 0, 0.08);
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+/* Блок "Кипарис" */
+.cypress-side {
+    border-right: 6px solid #4a90e2;
+    padding-right: 25px;
+    text-align: right;
+    font-style: italic;
+    margin: 30px 0;
+    color: #a8d5ff;
+}
+
+/* Наукова карточка */
+.science-card {
+    background: linear-gradient(135deg, #102a54 0%, #1a4d7a 100%);
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 50px 0;
+    box-shadow: 0 10px 40px rgba(16, 42, 84, 0.7),
+                0 0 60px rgba(74, 144, 226, 0.3);
+    border: 2px solid #4a90e2;
+}
+
+.science-card h2 {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.turbulence-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.turbulence-list li {
+    padding: 12px 0;
+    padding-left: 30px;
     position: relative;
-    overflow: hidden;
+    font-size: 1.1em;
 }
 
-.share-btn::before {
-    content: '';
+.turbulence-list li::before {
+    content: "✦";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
+    left: 0;
+    color: #4a90e2;
+    font-size: 1.3em;
 }
 
-.share-btn:hover::before {
-    width: 100px;
-    height: 100px;
+/* Фінальна цитата */
+.final-quote-block {
+    text-align: center;
+    border-top: 3px solid #ffd700;
+    border-bottom: 3px solid #ffd700;
+    padding: 30px 20px;
+    margin: 50px 0;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.05);
 }
 
-.share-btn:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+/* Рамка картини для Ван Гога */
+.vangogh-bg .spotlight-frame {
+    box-shadow: 0 0 60px rgba(74, 144, 226, 0.6),
+                0 0 30px rgba(255, 215, 0, 0.4),
+                0 15px 50px rgba(0, 0, 0, 0.9);
+    border: 8px solid #2d3e50;
 }
 
-.share-btn:active {
-    transform: translateY(-2px) scale(1.05);
+/* Кнопка дії */
+.v-gogh-btn {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #102a54;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+    transition: all 0.3s;
 }
 
-/* Кольори для кожної соцмережі */
-.share-btn.facebook {
-    background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%);
+.v-gogh-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
 }
-
-.share-btn.twitter {
-    background: linear-gradient(135deg, #1da1f2 0%, #0c85d0 100%);
-}
-
-.share-btn.telegram {
-    background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
-}
-
-.share-btn.viber {
-    background: linear-gradient(135deg, #7360f2 0%, #5a4bc4 100%);
-}
-
-.share-btn.whatsapp {
-    background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
-}
-
-.share-btn.email {
-    background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%);
-}
-
-/* Іконки через Unicode symbols */
-.icon-facebook::before { content: "f"; font-weight: bold; }
-.icon-twitter::before { content: "𝕏"; }
-.icon-telegram::before { content: "✈"; }
-.icon-viber::before { content: "☎"; }
-.icon-whatsapp::before { content: "💬"; }
-.icon-email::before { content: "✉"; }
 
 /* Адаптивність */
 @media (max-width: 768px) {
-    .share-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
+    .science-card {
+        padding: 25px;
     }
-
-    .share-buttons {
-        gap: 12px;
+    
+    .cypress-side {
+        text-align: left;
+        border-right: none;
+        border-left: 4px solid #4a90e2;
+        padding-left: 20px;
+        padding-right: 0;
     }
 }
-
-@media (max-width: 480px) {
-    .share-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-
-    .share-buttons {
-        gap: 10px;
-    }
-   /* ======================================================= */
-/* ФИНАЛЬНЫЙ БЛОК ВАН ГОГА (UA) */
-/* ======================================================= */
-
-/* Фон страницы */
-.vangogh-bg { background-color: #fdfbf7; color: #102a54; }
-
-/* Хедер: синий фон, желтый текст */
-.vangogh-bg .content-header {
-    background-color: #102a54 !important;
-    border-bottom: 3px solid #f4c430;
-}
-.vangogh-bg .page-title, 
-.vangogh-bg .language-switcher a, 
-.vangogh-bg .language-switcher .separator {
-    color: #f4c430 !important;
-}
-
-/* Элементы структуры текста */
-.vangogh-bg .text-block { margin-bottom: 30px; line-height: 1.6; }
-
-/* Линия-разделитель слева (для акцента на ХИТ) */
-.hit-accent {
-    border-left: 5px solid #f4c430;
-    padding-left: 20px;
-    margin: 20px 0;
-    background: rgba(244, 196, 48, 0.1);
-}
-
-/* Линия-разделитель справа (для Кипариса) */
-.cypress-side {
-    border-right: 5px solid #102a54;
-    padding-right: 20px;
-    text-align: right;
-    margin: 30px 0;
-}
-
-/* Блок ТУРБУЛЕНТНОСТЬ (темная карточка) */
-.science-card {
-    background: #102a54;
-    color: #f4c430;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(16, 42, 84, 0.3);
-    margin: 40px 0;
-}
-.science-card h2 { color: #ffffff; border-bottom: 1px solid #f4c430; padding-bottom: 10px; }
-.science-card ul { list-style: "✧ "; padding-left: 20px; color: #ffffff; }
-
-/* Финальная цитата под линией */
-.final-quote-block {
-    text-align: center;
-    border-top: 1px solid #f4c430;
-    border-bottom: 1px solid #f4c430;
-    padding: 20px 0;
-    margin: 40px 0;
-    font-style: italic;
-}
-
-/* Кнопка "Оживить" */
-.v-gogh-btn {
-    display: inline-block;
-    background: #f4c430;
-    color: #102a54;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-.v-gogh-btn:hover { transform: scale(1.1); background: #ffffff; }
-}
-
-
-
-
-
-
-
-
-
-
