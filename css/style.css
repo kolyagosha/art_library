@@ -1260,7 +1260,7 @@ html {
 }
 
 .icon-facebook::before {
-    content: 'FB';
+    content: '📘';
     font-size: 28px;
 }
 
@@ -1288,7 +1288,7 @@ html {
 }
 
 .icon-telegram::before {
-    content: 'TG';
+    content: '✈️';
     font-size: 26px;
 }
 
@@ -1302,7 +1302,7 @@ html {
 }
 
 .icon-viber::before {
-    content: 'VB';
+    content: '💜';
     font-size: 26px;
 }
 
@@ -1316,11 +1316,21 @@ html {
 }
 
 .icon-whatsapp::before {
-    content: 'WA';
+    content: '💬';
     font-size: 26px;
 }
 
-/* EMAIL - Сірий */
-.share-btn.email
+/* EMAIL - Робимо іншим кольором (Золотисто-бронзовий) */
+.share-btn.email {
+    background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); /* Колір старого золота/латуні */
+    color: #ffffff;
+}
 
+.share-btn.email:hover {
+    background: linear-gradient(135deg, #aa8c2c 0%, #8a6d1d 100%);
+}
 
+.icon-email::before {
+    content: '✉️'; 
+    font-size: 24px;
+}
