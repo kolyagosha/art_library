@@ -1260,7 +1260,7 @@ html {
 }
 
 .icon-facebook::before {
-    content: '📘';
+    content: 'FB';
     font-size: 28px;
 }
 
@@ -1274,7 +1274,7 @@ html {
 }
 
 .icon-twitter::before {
-    content: '🐦';
+    content: '𝕏';
     font-size: 26px;
 }
 
@@ -1288,7 +1288,7 @@ html {
 }
 
 .icon-telegram::before {
-    content: '✈️';
+    content: 'TG';
     font-size: 26px;
 }
 
@@ -1302,7 +1302,7 @@ html {
 }
 
 .icon-viber::before {
-    content: '📱';
+    content: 'VB';
     font-size: 26px;
 }
 
@@ -1316,10 +1316,11 @@ html {
 }
 
 .icon-whatsapp::before {
-    content: '💬';
+    content: 'WA';
     font-size: 26px;
 }
 
 /* EMAIL - Сірий */
 .share-btn.email
+
 
