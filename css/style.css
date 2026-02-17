@@ -1133,7 +1133,7 @@ html {
     border: 8px solid #2d3e50;
 }
 
-/* Кнопка дії */
+//* Кнопка дії */
 .v-gogh-btn {
     background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
     color: #102a54;
@@ -1151,7 +1151,7 @@ html {
 .v-gogh-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
-}
+}/
 
 /* Адаптивність */
 @media (max-width: 768px) {
@@ -1334,3 +1334,4 @@ html {
     content: '✉️'; 
     font-size: 24px;
 }
+
