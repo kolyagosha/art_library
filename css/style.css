@@ -1133,25 +1133,7 @@ html {
     border: 8px solid #2d3e50;
 }
 
-//* Кнопка дії */
-.v-gogh-btn {
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    color: #102a54;
-    padding: 18px 40px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1.1em;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
-    transition: all 0.3s;
-}
 
-.v-gogh-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
-}/
 
 /* Адаптивність */
 @media (max-width: 768px) {
@@ -1334,4 +1316,5 @@ html {
     content: '✉️'; 
     font-size: 24px;
 }
+
 
