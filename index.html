@@ -12,14 +12,391 @@
   gtag('config', 'G-6GR36BFKZ6');
 </script>
 
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=main.html">
-    <script>window.location.href = "main.html";</script>
-    <title>Redirecting...</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Музейна Подорож — Оберіть мову</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --parchment: #f5edd6;
+      --parchment-dark: #e8d9b5;
+      --ink: #2c1f0e;
+      --ink-light: #5a3e20;
+      --gold: #b8860b;
+      --gold-light: #d4a520;
+      --shadow: rgba(44, 31, 14, 0.18);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    body {
+      background-color: #d6c9a8;
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(180,155,100,0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(180,155,100,0.3) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Ccircle cx='11' cy='11' r='8' stroke='%232c1f0e' stroke-width='2.2' fill='none'/%3E%3Cline x1='17' y1='17' x2='25' y2='25' stroke='%232c1f0e' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") 11 11, auto;
+    }
+
+    /* Місія вгорі */
+    .mission {
+      text-align: center;
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: fadeDown 0.8s ease forwards 0.2s;
+    }
+    .mission-ua {
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+    }
+    .mission-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      color: var(--ink-light);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 6px;
+      opacity: 0.65;
+    }
+
+    /* Свиток */
+    .scroll-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 680px;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards 0.5s;
+    }
+
+    /* Ручки свитка */
+    .scroll-handle {
+      width: 100%;
+      height: 28px;
+      background: linear-gradient(180deg, #8b6914 0%, #c49a28 40%, #a07818 60%, #8b6914 100%);
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,220,100,0.4);
+      position: relative;
+      z-index: 2;
+    }
+    .scroll-handle::before, .scroll-handle::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #e8c048, #7a5810);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    .scroll-handle::before { left: 12px; }
+    .scroll-handle::after { right: 12px; }
+
+    /* Тіло свитка */
+    .scroll-body {
+      background: var(--parchment);
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 31px,
+          rgba(139,104,20,0.06) 31px,
+          rgba(139,104,20,0.06) 32px
+        ),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+      box-shadow:
+        0 8px 40px rgba(0,0,0,0.22),
+        inset 0 0 60px rgba(180,140,60,0.12),
+        inset 4px 0 12px rgba(0,0,0,0.06),
+        inset -4px 0 12px rgba(0,0,0,0.06);
+      padding: 44px 52px 44px 52px;
+      position: relative;
+      z-index: 1;
+      margin: -6px 10px;
+    }
+
+    /* Прикраса вгорі */
+    .scroll-ornament {
+      text-align: center;
+      color: var(--gold);
+      font-size: 22px;
+      letter-spacing: 12px;
+      margin-bottom: 18px;
+      line-height: 1;
+      opacity: 0.7;
+    }
+
+    /* Назва автора */
+    .scroll-author {
+      text-align: center;
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: var(--ink-light);
+      letter-spacing: 0.08em;
+      margin-bottom: 28px;
+      opacity: 0.75;
+    }
+
+    /* Підказка */
+    .scroll-hint {
+      text-align: center;
+      font-size: 12px;
+      color: var(--ink-light);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      opacity: 0.5;
+    }
+
+    /* Роздільник */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 0 28px 0;
+      opacity: 0.5;
+    }
+
+    /* Список мов */
+    .lang-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .lang-item a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.2s, transform 0.25s ease;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Ccircle cx='11' cy='11' r='8' stroke='%232c1f0e' stroke-width='2.2' fill='none'/%3E%3Cline x1='17' y1='17' x2='25' y2='25' stroke='%232c1f0e' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") 11 11, pointer;
+      position: relative;
+    }
+
+    .lang-item a:hover {
+      background: rgba(180, 140, 50, 0.10);
+    }
+
+    .lang-phrase {
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+      line-height: 1.5;
+      flex: 1;
+      transition: font-size 0.25s ease, color 0.2s;
+    }
+
+    .lang-item a:hover .lang-phrase {
+      font-size: 17px;
+      color: var(--ink);
+    }
+
+    .lang-code {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      margin-left: 20px;
+      min-width: 44px;
+      text-align: right;
+      transition: color 0.2s, font-size 0.25s ease;
+    }
+
+    .lang-item a:hover .lang-code {
+      color: var(--gold-light);
+      font-size: 20px;
+    }
+
+    /* Нижній орнамент */
+    .scroll-ornament-bottom {
+      text-align: center;
+      color: var(--gold);
+      font-size: 18px;
+      letter-spacing: 10px;
+      margin-top: 20px;
+      opacity: 0.6;
+    }
+
+    /* Підпис внизу */
+    .footer-note {
+      margin-top: 28px;
+      font-size: 11px;
+      color: var(--ink-light);
+      letter-spacing: 0.12em;
+      text-align: center;
+      opacity: 0.5;
+      font-style: italic;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 1.2s;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Адаптив — планшет */
+    @media (max-width: 768px) {
+      .scroll-wrap { max-width: 560px; }
+      .scroll-body { padding: 36px 36px; }
+      .mission-ua { font-size: 17px; }
+      .lang-phrase { font-size: 13px; }
+      .lang-code { font-size: 17px; min-width: 40px; }
+      .lang-item a:hover .lang-phrase { font-size: 16px; }
+      .lang-item a:hover .lang-code { font-size: 19px; }
+    }
+
+    /* Адаптив — телефон */
+    @media (max-width: 480px) {
+      body { padding: 24px 12px; justify-content: flex-start; padding-top: 36px; }
+      .scroll-wrap { max-width: 100%; }
+      .scroll-body { padding: 28px 20px; margin: -6px 6px; }
+      .scroll-handle { height: 22px; border-radius: 11px; }
+      .scroll-handle::before, .scroll-handle::after { width: 14px; height: 14px; }
+      .mission-ua { font-size: 15px; }
+      .mission-en { font-size: 11px; letter-spacing: 0.12em; }
+      .mission { margin-bottom: 22px; }
+      .scroll-author { font-size: 12px; margin-bottom: 20px; }
+      .scroll-hint { font-size: 10px; margin-bottom: 22px; }
+      .scroll-ornament { font-size: 16px; letter-spacing: 8px; margin-bottom: 14px; }
+      .lang-item a { padding: 9px 10px; }
+      .lang-phrase { font-size: 12px; }
+      .lang-code { font-size: 15px; min-width: 32px; margin-left: 12px; }
+      .lang-item a:hover .lang-phrase { font-size: 14px; }
+      .lang-item a:hover .lang-code { font-size: 17px; }
+      .footer-note { font-size: 10px; margin-top: 20px; }
+    }
+  </style>
 </head>
 <body>
-    <p>Перенаправлення... <a href="main.html">Натисніть тут</a></p>
+
+  <div class="mission">
+    <p class="mission-ua">Мистецтво — для всіх. Безкоштовно і назавжди.</p>
+    <p class="mission-en">Art for everyone. Free and forever.</p>
+  </div>
+
+  <div class="scroll-wrap">
+    <!-- Верхня ручка -->
+    <div class="scroll-handle"></div>
+
+    <!-- Тіло свитка -->
+    <div class="scroll-body">
+
+      <div class="scroll-ornament">— ✦ —</div>
+
+      <p class="scroll-author">Олесь Гончар · «Собор» · 1968</p>
+
+      <p class="scroll-hint">Оберіть мову · Choose your language</p>
+
+      <div class="divider"></div>
+
+      <ul class="lang-list">
+
+        <li class="lang-item">
+          <a href="main.html">
+            <span class="lang-phrase">Собори ваших душ бережіть</span>
+            <span class="lang-code">UA</span>
+          </a>
+        </li>
+
+        <li class="lang-item">
+          <a href="en/main.html">
+            <span class="lang-phrase">Guard the cathedrals of your souls</span>
+            <span class="lang-code">EN</span>
+          </a>
+        </li>
+
+        <li class="lang-item">
+          <a href="de/main.html">
+            <span class="lang-phrase">Hütet die Kathedralen eurer Seelen</span>
+            <span class="lang-code">DE</span>
+          </a>
+        </li>
+
+        <li class="lang-item">
+          <a href="fr/main.html">
+            <span class="lang-phrase">Gardez les cathédrales de vos âmes</span>
+            <span class="lang-code">FR</span>
+          </a>
+        </li>
+
+        <li class="lang-item">
+          <a href="nl/main.html">
+            <span class="lang-phrase">Bewaar de kathedralen van uw zielen</span>
+            <span class="lang-code">NL</span>
+          </a>
+        </li>
+
+        <li class="lang-item">
+          <a href="it/main.html">
+            <span class="lang-phrase">Custodite le cattedrali delle vostre anime</span>
+            <span class="lang-code">IT</span>
+          </a>
+        </li>
+
+        <li class="lang-item">
+          <a href="es/main.html">
+            <span class="lang-phrase">Guardad las catedrales de vuestras almas</span>
+            <span class="lang-code">ES</span>
+          </a>
+        </li>
+
+        <li class="lang-item">
+          <a href="pl/main.html">
+            <span class="lang-phrase">Strzeżcie katedr waszych dusz</span>
+            <span class="lang-code">PL</span>
+          </a>
+        </li>
+
+        <li class="lang-item">
+          <a href="ja/main.html">
+            <span class="lang-phrase">あなたがたの魂の大聖堂を守りなさい</span>
+            <span class="lang-code">JA</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="scroll-ornament-bottom">— ✦ —</div>
+
+    </div>
+    <!-- /тіло -->
+
+    <!-- Нижня ручка -->
+    <div class="scroll-handle"></div>
+  </div>
+
+  <p class="footer-note">Ексклюзивна цифрова ініціатива hai-guys.space для «Дніпровської школи української культури та мистецтв ім. Олеся Гончара»</p>
+
 </body>
 </html>
+
+
 
