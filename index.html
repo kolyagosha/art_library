@@ -27,53 +27,15 @@ html, body {
 }
 
 body {
+  /* Фолбек якщо картинка не завантажиться */
   background-color: #6b4423;
+  /* Реальна текстура дерева + затемнення для читабельності тексту */
   background-image:
-    /* Виньетка — тёмные края */
-    radial-gradient(ellipse at 50% 50%,
-      transparent 30%,
-      rgba(20, 8, 0, 0.65) 100%
-    ),
-    /* Границы "досок" — горизонтальные тёмные линии */
-    repeating-linear-gradient(
-      180deg,
-      transparent           0px,
-      transparent           118px,
-      rgba(30, 12, 2, 0.55) 118px,
-      rgba(30, 12, 2, 0.55) 122px,
-      transparent           122px,
-      transparent           240px,
-      rgba(30, 12, 2, 0.55) 240px,
-      rgba(30, 12, 2, 0.55) 244px
-    ),
-    /* Светлые блики на досках */
-    repeating-linear-gradient(
-      180deg,
-      rgba(255, 200, 120, 0.07) 0px,
-      rgba(255, 200, 120, 0.00) 60px,
-      rgba(255, 200, 120, 0.04) 120px
-    ),
-    /* Волокна дерева */
-    repeating-linear-gradient(
-      175deg,
-      transparent            0px,
-      transparent            8px,
-      rgba(90, 45, 10, 0.18) 8px,
-      rgba(90, 45, 10, 0.18) 9px,
-      transparent            9px,
-      transparent            16px,
-      rgba(60, 25, 5, 0.10)  16px,
-      rgba(60, 25, 5, 0.10)  17px
-    ),
-    /* Тёплые боковые блики */
-    linear-gradient(
-      90deg,
-      rgba(80, 40, 10, 0.5) 0%,
-      rgba(180, 110, 45, 0.10) 20%,
-      rgba(200, 130, 55, 0.04) 50%,
-      rgba(180, 110, 45, 0.10) 80%,
-      rgba(80, 40, 10, 0.5) 100%
-    );
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url('images/wood_texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 
   display: flex;
   flex-direction: column;
@@ -295,34 +257,75 @@ body {
 /* ================================================ */
 /* АДАПТИВ                                          */
 /* ================================================ */
+
+/* Планшет — 768px */
 @media (max-width: 768px) {
-  .scroll-wrap  { max-width: 560px; }
-  .scroll-body  { padding: 36px 36px; }
-  .mission-ua   { font-size: 18px; }
-  .lang-phrase  { font-size: 13px; }
-  .lang-code    { font-size: 17px; min-width: 40px; }
+  body         { padding: 30px 16px; }
+  .scroll-wrap { max-width: 520px; }
+  .scroll-body { padding: 36px 32px; }
+  .mission-ua  { font-size: 18px; }
+  .lang-phrase { font-size: 13px; }
+  .lang-code   { font-size: 17px; min-width: 40px; }
   .lang-item a:hover .lang-phrase { font-size: 16px; }
   .lang-item a:hover .lang-code   { font-size: 19px; }
-  .footer-note  { font-size: 13px; }
+  .footer-note { font-size: 13px; }
 }
 
+/* Телефон — 480px */
 @media (max-width: 480px) {
-  body          { padding: 28px 12px; justify-content: flex-start; padding-top: 32px; }
+  /* На телефоні background-attachment: fixed може гальмувати */
+  body {
+    background-attachment: scroll;
+    padding: 20px 10px;
+    justify-content: flex-start;
+    padding-top: 28px;
+  }
+
+  .site-header  { margin-bottom: 18px; }
+  .mission-ua   { font-size: 15px; letter-spacing: 0.01em; }
+  .mission-en   { font-size: 10px; letter-spacing: 0.16em; margin-top: 6px; }
+
+  /* Свиток без бокових відступів */
   .scroll-wrap  { max-width: 100%; }
-  .scroll-body  { padding: 28px 20px; margin: -6px 6px; }
-  .scroll-handle { height: 22px; border-radius: 11px; }
+  .scroll-body  {
+    padding: 24px 16px;
+    margin: -6px 4px;
+  }
+
+  /* Ручки тонші */
+  .scroll-handle { height: 20px; border-radius: 10px; }
   .scroll-handle::before,
-  .scroll-handle::after { width: 14px; height: 14px; }
-  .mission-ua   { font-size: 16px; }
-  .mission-en   { font-size: 11px; letter-spacing: 0.14em; }
-  .site-header  { margin-bottom: 22px; }
-  .scroll-ornament { font-size: 16px; letter-spacing: 8px; }
-  .lang-item a  { padding: 9px 10px; }
-  .lang-phrase  { font-size: 12px; }
-  .lang-code    { font-size: 15px; min-width: 32px; margin-left: 12px; }
-  .lang-item a:hover .lang-phrase { font-size: 14px; }
-  .lang-item a:hover .lang-code   { font-size: 17px; }
-  .footer-note  { font-size: 12px; margin-top: 20px; }
+  .scroll-handle::after { width: 13px; height: 13px; }
+
+  /* Орнамент */
+  .scroll-ornament        { font-size: 15px; letter-spacing: 8px; margin-bottom: 12px; }
+  .scroll-ornament-bottom { font-size: 14px; letter-spacing: 7px; margin-top: 16px; }
+  .scroll-author { font-size: 12px; margin-bottom: 18px; }
+  .scroll-hint   { font-size: 10px; letter-spacing: 0.12em; margin-bottom: 20px; }
+
+  /* Пункти мов */
+  .lang-list   { gap: 2px; }
+  .lang-item a { padding: 9px 8px; }
+  .lang-phrase {
+    font-size: 13px;
+    /* Ховер-збільшення прибираємо — на телефоні немає hover */
+  }
+  .lang-code   { font-size: 15px; min-width: 34px; margin-left: 10px; }
+
+  /* На телефоні hover-анімація некоректна — вимикаємо */
+  .lang-item a:hover .lang-phrase { font-size: 13px; }
+  .lang-item a:hover .lang-code   { font-size: 15px; }
+
+  .footer-note { font-size: 12px; margin-top: 18px; line-height: 1.6; }
+}
+
+/* Дуже маленький телефон — 360px */
+@media (max-width: 360px) {
+  .mission-ua  { font-size: 14px; }
+  .scroll-body { padding: 20px 12px; }
+  .lang-phrase { font-size: 12px; }
+  .lang-code   { font-size: 14px; }
+  .footer-note { font-size: 11px; }
 }
 
 </style>
