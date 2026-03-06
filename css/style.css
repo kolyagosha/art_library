@@ -1317,12 +1317,12 @@ html {
     font-size: 24px;
 }
 
-/* СТИЛЬ ДЛЯ КОНТЕЙНЕРА ВІДЕО (BUNNY.NET) */
+/* СТИЛЬ ДЛЯ КОНТЕЙНЕРА ВІДЕО (BUNNY.NET) - ЕДИНЫЙ СТАНДАРТ */
 .video-container {
     position: relative;
     padding-top: 56.25%; /* Соотношение 16:9 */
     width: 100%;
-    max-width: 1100px; /* Збільшено для кращого вигляду картин Ван Гога та Куїнджі */
+    max-width: 900px; /* Уменьшили с 1100px до стандарта */
     margin: 30px auto; /* Центруємо */
     border: 5px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -1344,7 +1344,7 @@ html {
 /* АДАПТИВНІСТЬ */
 @media (max-width: 1024px) {
     .video-container {
-        max-width: 90%; /* На планшетах займає більше місця */
+        max-width: 90%; 
     }
 }
 
@@ -1354,4 +1354,14 @@ html {
         border-width: 3px;
     }
 }
+
+/* Свечение и рамка ТОЛЬКО для страниц Куинджи */
+.kuindzhi-bg .video-container {
+    box-shadow: 0 0 60px rgba(255, 255, 100, 0.6), 
+                0 0 20px rgba(255, 255, 255, 0.4),
+                0 10px 40px rgba(0, 0, 0, 0.8);
+    border: 8px solid #fff;
+    border-radius: 2px; /* Убираем сильное скругление, чтобы было похоже на картину */
+}
+
 
