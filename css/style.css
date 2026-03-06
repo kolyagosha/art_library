@@ -1317,12 +1317,12 @@ html {
     font-size: 24px;
 }
 
-/* СТИЛЬ ДЛЯ КОНТЕЙНЕРА ВІДЕО (BUNNY.NET) - ЕДИНЫЙ СТАНДАРТ */
+/* СТИЛЬ ДЛЯ КОНТЕЙНЕРА ВІДЕО (BUNNY.NET) */
 .video-container {
     position: relative;
     padding-top: 56.25%; /* Соотношение 16:9 */
     width: 100%;
-    max-width: 900px; /* Уменьшили с 1100px до стандарта */
+    max-width: 1100px; /* Збільшено для кращого вигляду картин Ван Гога та Куїнджі */
     margin: 30px auto; /* Центруємо */
     border: 5px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -1344,7 +1344,7 @@ html {
 /* АДАПТИВНІСТЬ */
 @media (max-width: 1024px) {
     .video-container {
-        max-width: 90%; 
+        max-width: 90%; /* На планшетах займає більше місця */
     }
 }
 
@@ -1363,5 +1363,6 @@ html {
     border: 8px solid #fff;
     border-radius: 2px; /* Убираем сильное скругление, чтобы было похоже на картину */
 }
+
 
 
