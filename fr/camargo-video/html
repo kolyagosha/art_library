@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR36BFKZ6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6GR36BFKZ6');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Camargo Dancing</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="content-page-body camargo-bg">
+
+    <header class="content-header">
+        <h1 class="page-title">Talent, mastery, a dash of adventurous spirit</h1>
+        <div class="language-switcher">
+            <a href="camargo-video.html" class="active">FR</a>
+            <span class="separator">|</span>
+            <a href="../camargo-video.html">UA</a>
+            <span class="separator">|</span>
+            <a href="../en/camargo-video.html">EN</a>
+            <span class="separator">|</span>
+            <a href="../de/camargo-video.html">DE</a>
+            <span class="separator">|</span>
+            <a href="../nl/camargo-video.html">NL</a>
+            <span class="separator">|</span>
+            <a href="../it/camargo-video.html">IT</a>
+            <span class="separator">|</span>
+            <a href="../es/camargo-video.html">ES</a>
+            <span class="separator">|</span>
+            <a href="../pl/camargo-video.html">PL</a>
+            <span class="separator">|</span>
+            <a href="main.html" class="back-link">← Back</a>
+        </div>
+    </header>
+
+    <main class="content-container">
+        
+        <div class="final-video-section">
+            <h2 class="section-title center-text">La Camargo dansant</h2>
+
+    </main>
+            <div class="video-container">
+        <iframe 
+            src="https://iframe.mediadelivery.net/embed/615879/39174cc6-0d32-4c36-8ce4-b30bf996be98?autoplay=true&loop=false&muted=false&preload=true&responsive=true"
+            loading="lazy" 
+            style="border:0;position:absolute;top:0;height:100%;width:100%;" 
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" 
+            allowfullscreen="true">
+        </iframe>
+    </div>
+            
+        </div>
+    
+    <footer class="social-footer">
+    <p>Share this journey:</p>
+    <div class="share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://artlibrary.site/en/camargo-video.html" 
+           class="share-btn facebook" target="_blank" rel="noopener">
+            <span class="icon-facebook"></span>
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://artlibrary.site/en/camargo-video.html&text=museum journey" 
+           class="share-btn twitter" target="_blank" rel="noopener">
+            <span class="icon-twitter"></span>
+        </a>
+        <a href="https://t.me/share/url?url=https://artlibrary.site/en/camargo-video.html&text=museum journey" 
+           class="share-btn telegram" target="_blank" rel="noopener">
+            <span class="icon-telegram"></span>
+        </a>
+        <a href="viber://forward?text=museum journey https://artlibrary.site/en/camargo-video.html" 
+           class="share-btn viber">
+            <span class="icon-viber"></span>
+        </a>
+        <a href="https://wa.me/?text=museum journey https://artlibrary.site/en/camargo-video.html" 
+           class="share-btn whatsapp" target="_blank" rel="noopener">
+            <span class="icon-whatsapp"></span>
+        </a>
+        <a href="mailto:?subject=museum journey&body=Observe: https://artlibrary.site/en/camargo-video.html" 
+           class="share-btn email">
+            <span class="icon-email"></span>
+        </a>
+    </div>
+</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
