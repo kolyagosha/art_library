@@ -1,95 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR36BFKZ6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6GR36BFKZ6');
-    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR36BFKZ6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6GR36BFKZ6');
+</script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Танцівниця Камарго</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        /* ===================================================== */
-        /* ВИПРАВЛЕНИЙ СТИЛЬ ДЛЯ ВІДЕО-КОНТЕЙНЕРА BUNNY.NET     */
-        /* ===================================================== */
-
-        /* Обгортка для обмеження максимальної ширини */
-        .video-wrapper {
-            width: 100%;
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 5%; /* Відступи на мобільних */
-        }
-
-        /* Контейнер з aspect-ratio trick (замість padding-top %) */
-        .video-container {
-            position: relative;
-            width: 100%;
-            /* Сучасний спосіб зберегти 16:9 — підтримується всіма браузерами з 2021 */
-            aspect-ratio: 16 / 9;
-            border: 5px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            background: #000;
-            overflow: hidden;
-        }
-
-        /* iframe займає весь контейнер */
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-            display: block; /* прибирає зайвий inline-відступ */
-        }
-
-        /* Адаптивність */
-        @media (max-width: 1100px) {
-            .video-wrapper {
-                max-width: 90%;
-                padding: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .video-wrapper {
-                max-width: 100%;
-                padding: 0 3%;
-                margin: 20px auto;
-            }
-
-            .video-container {
-                border-width: 3px;
-                border-radius: 5px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .video-wrapper {
-                padding: 0;
-            }
-
-            .video-container {
-                border-radius: 0; /* На маленьких екранах — край в край */
-                border-left: none;
-                border-right: none;
-            }
-        }
-
-        /* Кнопка повноекранного режиму — підказка для iOS Safari */
-        /* (iOS дозволяє fullscreen тільки через атрибут playsinline у <video>,
-            для iframe Bunny.net це контролюється на їхньому боці через allowfullscreen) */
-    </style>
 </head>
 <body class="content-page-body camargo-bg">
 
@@ -116,58 +43,60 @@
         </div>
     </header>
 
-    <!-- ✅ ВИПРАВЛЕНО: вся структура всередині <main> -->
-    <main class="content-container">
+     <main class="content-container">
         
         <div class="final-video-section">
             <h2 class="section-title center-text">ТАНЦІВНИЦЯ КАМАРГО</h2>
 
-            <!-- ✅ ВИПРАВЛЕНО: video-wrapper + video-container всередині main -->
-            <div class="video-wrapper">
-                <div class="video-container">
-                    <iframe 
-                        src="https://iframe.mediadelivery.net/embed/615879/3b524887-bcd5-4b58-bcf9-fc221ee354d5?autoplay=true&loop=false&muted=false&preload=true&responsive=true"  
-                        loading="lazy" 
-                        allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen"
-                        allowfullscreen="true">
-                    </iframe>
-                </div>
-            </div>
-
-        </div><!-- /final-video-section -->
-
-    </main><!-- /content-container -->
-
+    </main>
+            <div class="video-container">
+        <iframe 
+            src="https://iframe.mediadelivery.net/embed/615879/3b524887-bcd5-4b58-bcf9-fc221ee354d5?autoplay=true&loop=false&muted=false&preload=true&responsive=true"  
+            loading="lazy" 
+            style="border:0;position:absolute;top:0;height:100%;width:100%;" 
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" 
+            allowfullscreen="true">
+        </iframe>
+    </div>
+            
+        </div>
     
     <footer class="social-footer">
-        <p>Поділитися цією подорожжю:</p>
-        <div class="share-buttons">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://artlibrary.site/camargo-video.html" 
-               class="share-btn facebook" target="_blank" rel="noopener">
-                <span class="icon-facebook"></span>
-            </a>
-            <a href="https://twitter.com/intent/tweet?url=https://artlibrary.site/camargo-video.html&text=Музейна подорож" 
-               class="share-btn twitter" target="_blank" rel="noopener">
-                <span class="icon-twitter"></span>
-            </a>
-            <a href="https://t.me/share/url?url=https://artlibrary.site/camargo-video.html&text=Музейна подорож" 
-               class="share-btn telegram" target="_blank" rel="noopener">
-                <span class="icon-telegram"></span>
-            </a>
-            <a href="viber://forward?text=Музейна подорож https://artlibrary.site/camargo-video.html" 
-               class="share-btn viber">
-                <span class="icon-viber"></span>
-            </a>
-            <a href="https://wa.me/?text=Музейна подорож https://artlibrary.site/camargo-video.html" 
-               class="share-btn whatsapp" target="_blank" rel="noopener">
-                <span class="icon-whatsapp"></span>
-            </a>
-            <a href="mailto:?subject=Музейна подорож&body=Подивіться: https://artlibrary.site/camargo-video.html" 
-               class="share-btn email">
-                <span class="icon-email"></span>
-            </a>
-        </div>
-    </footer>
-
+    <p>Поділитися цією подорожжю:</p>
+    <div class="share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://artlibrary.site/camargo-video.html" 
+           class="share-btn facebook" target="_blank" rel="noopener">
+            <span class="icon-facebook"></span>
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://artlibrary.site/camargo-video.html&text=Музейна подорож" 
+           class="share-btn twitter" target="_blank" rel="noopener">
+            <span class="icon-twitter"></span>
+        </a>
+        <a href="https://t.me/share/url?url=https://artlibrary.site/camargo-video.html&text=Музейна подорож" 
+           class="share-btn telegram" target="_blank" rel="noopener">
+            <span class="icon-telegram"></span>
+        </a>
+        <a href="viber://forward?text=Музейна подорож https://artlibrary.site/camargo-video.html" 
+           class="share-btn viber">
+            <span class="icon-viber"></span>
+        </a>
+        <a href="https://wa.me/?text=Музейна подорож https://artlibrary.site/camargo-video.html" 
+           class="share-btn whatsapp" target="_blank" rel="noopener">
+            <span class="icon-whatsapp"></span>
+        </a>
+        <a href="mailto:?subject=Музейна подорож&body=Подивіться: https://artlibrary.site/camargo-video.html" 
+           class="share-btn email">
+            <span class="icon-email"></span>
+        </a>
+    </div>
+</footer>
 </body>
+
 </html>
+
+
+
+
+
+
+
