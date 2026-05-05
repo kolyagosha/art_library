@@ -1401,7 +1401,7 @@ html {
 
 
 .freya-bg .spotlight-frame {
-    max-width: 650px;  /* было 900px — уменьшаем в 2+ раза */
+    max-width: 600px;  /* было 900px — уменьшаем в 2+ раза */
 }
 
 
