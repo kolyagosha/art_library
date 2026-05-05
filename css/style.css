@@ -1357,6 +1357,47 @@ html {
 
 
 
+/* УНІКАЛЬНИЙ СТИЛЬ ФРЕЇ: ЗОЛОТІ СЛЬОЗИ */
+.freya-bg {
+    background-color: #0a0a0a;
+    background-image: radial-gradient(circle at top, #1a1a2e 0%, #050505 100%);
+    color: #f0f0f0;
+}
+
+.freya-bg .page-title, .freya-bg h2 {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    border-bottom: 2px solid #d4af37;
+}
+
+/* КОСМІЧНИЙ РОЗДІЛЬНИК */
+.cosmic-divider {
+    height: 2px;
+    width: 80%;
+    margin: 60px auto;
+    background: linear-gradient(90deg, transparent, #ffd700, #4a90e2, #ffd700, transparent);
+    position: relative;
+    border: none;
+    opacity: 0.6;
+}
+
+.cosmic-divider::after {
+    content: "✦";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffd700;
+    font-size: 1.5em;
+    text-shadow: 0 0 15px #ffd700;
+}
+
+.freya-bg .ornate-text-box {
+    border: 5px double #d4af37;
+    background: rgba(255, 215, 0, 0.05);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
 
 
 
