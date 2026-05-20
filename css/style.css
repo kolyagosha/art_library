@@ -1542,6 +1542,181 @@ html {
 
 
 
+/* ======================================================= */
+/* УНІКАЛЬНИЙ СТИЛЬ ПІКАССО: ДІВЧИНКА НА КУЛІ */
+/* ======================================================= */
 
+.picasso-bg {
+    /* Рожево-пісочний фон випаленої землі (Рожевий період) */
+    background-color: #e3d3c4;
+    background-image: linear-gradient(135deg, #e3d3c4 0%, #ecdccf 50%, #d1bead 100%);
+    color: #2b3a4a; /* Глибокий завітрений синій (Блакитний період) */
+    font-family: 'Georgia', serif;
+}
+
+/* ПРОЛОГ */
+.picasso-bg .picasso-prologue {
+    text-align: center;
+    font-size: 1.5em;
+    font-style: italic;
+    color: #1b2a4a;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+/* СТИЛІЗАЦІЯ ЗАГОЛОВКІВ */
+.picasso-bg .page-title,
+.picasso-bg h2,
+.picasso-bg h3 {
+    color: #1c354e; /* Колір шортів атлета */
+    text-shadow: none;
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #b86b61; /* Теплий теракотовий акцент */
+}
+
+/* КОНТРАСТ ФОРМ: БЛОК-КУБ (Чоловік / Статика) */
+.picasso-bg .cube-panel {
+    background: #fdfaf6;
+    border: 3px solid #1c354e;
+    border-radius: 0px !important; /* Примусово рубані кути */
+    padding: 35px;
+    box-shadow: 15px 15px 0px #1c354e; /* Сорі, але це монументальний куб */
+    margin-bottom: 60px;
+}
+
+.picasso-bg .stats-cube {
+    background: #f4ece4;
+    border-left: 5px solid #1c354e;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.picasso-bg .stats-cube ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.picasso-bg .cube-quote {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    color: #b86b61;
+    margin-top: 20px;
+}
+
+/* КОНТРАСТ ФОРМ: БЛОК-СФЕРА (Дівчинка / Динаміка) */
+.picasso-bg .sphere-panel {
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(184, 107, 97, 0.4);
+    border-radius: 45px !important; /* Максимально округлена сфера */
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(184, 107, 97, 0.15);
+    margin-bottom: 60px;
+}
+
+.picasso-bg .balance-circle-accent {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    padding: 25px;
+    margin: 30px 0;
+    text-align: center;
+    font-style: italic;
+    border: 1px dashed #b86b61;
+}
+
+.picasso-bg .character-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.picasso-bg .char-man {
+    border-top: 2px solid #1c354e;
+    padding-top: 15px;
+}
+
+.picasso-bg .char-girl {
+    border-top: 2px solid #b86b61;
+    padding-top: 15px;
+    text-align: right;
+}
+
+/* ГЕОМЕТРИЧНИЙ ОРНАМЕНТ (Латина) */
+.picasso-bg .geometry-box {
+    border: 4px double #1c354e;
+    border-radius: 0;
+    background: #1c354e;
+    color: #fdfaf6;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+.picasso-bg .geometry-box h3 {
+    color: #e3d3c4;
+    border-bottom: 1px solid #e3d3c4;
+    text-align: center;
+    font-style: italic;
+}
+
+/* МЕДІА-БЛОК ТА РАМКА ДЛЯ КАРТИНИ */
+.picasso-bg .picasso-media {
+    background: #fdfaf6;
+    border: 1px solid #d1bead;
+    padding: 40px 20px;
+}
+
+.picasso-bg .picasso-frame {
+    border: 12px solid #2b3a4a; /* Важка класична темна рамка */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    background: #000;
+}
+
+.picasso-bg .picasso-player {
+    background: #eedfd3;
+    border: 1px solid #b86b61;
+    border-radius: 12px;
+    padding: 25px;
+    color: #1c354e;
+}
+
+.picasso-bg .music-quote {
+    font-style: italic;
+    font-weight: bold;
+    color: #b86b61;
+    margin: 10px 0;
+}
+
+.picasso-bg .music-desc {
+    font-size: 0.95em;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* ПОРТРЕТ */
+.picasso-bg .picasso-portrait {
+    border: 4px solid #1c354e;
+    box-shadow: 8px 8px 0px #b86b61;
+}
+
+/* АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ */
+@media (max-width: 768px) {
+    .picasso-bg .character-split {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .picasso-bg .char-girl {
+        text-align: left;
+    }
+    .picasso-bg .cube-panel {
+        box-shadow: 8px 8px 0px #1c354e;
+        padding: 20px;
+    }
+    .picasso-bg .sphere-panel {
+        border-radius: 20px !important;
+        padding: 20px;
+    }
+}
 
 
