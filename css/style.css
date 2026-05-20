@@ -1414,7 +1414,7 @@ html {
 .monet-bg {
     /* Фон: акварельні, ніжні відтінки води та неба */
     background-color: #e0eaf5;
-    background-image: linear-gradient(135deg, #e0eaf5 0%, #cfd9df 40%, #b8c6db 100%);
+    background-image: linear-gradient(135deg, #a3b8cc 0%, #8ca1c1 35%, #6b7aa5 70%, #4a537d 100%);
     color: #1a3a5f; /* Глибокий синій для зручності читання */
     background-attachment: fixed;
 }
