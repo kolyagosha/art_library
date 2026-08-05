@@ -1366,7 +1366,7 @@ html {
     max-width: 600px;
 
     /* НОВОЕ: ограничиваем по высоте видимой области, а не жёстко по ширине */
-    max-height: 85vh; 
+    max-height: 95vh; 
     aspect-ratio: 9 / 16;
 
     margin: 30px auto;
