@@ -1362,20 +1362,19 @@ html {
 /* ======================================================= */
 .video-container-vertical {
     position: relative;
-    padding-top: 177.77%; /* Перевернута пропорція 16:9 */
     width: 100%;
-    
-    /* ВАЖНО: Если тут поставить 600px, то высота видео станет 1066px! 
-       Оно просто не влезет ни в один стандартный экран ноутбука. 
-       Поэтому 450-500px — это потолок для десктопа. */
-    max-width: 600px; 
-    
-    margin: 30px auto; /* Центруємо */
+    max-width: 600px;
+
+    /* НОВОЕ: ограничиваем по высоте видимой области, а не жёстко по ширине */
+    max-height: 85vh; 
+    aspect-ratio: 9 / 16;
+
+    margin: 30px auto;
     border: 5px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     background: #000;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 /* СТИЛЬ ДЛЯ САМОГО IFRAME ВСЕРЕДИНІ ВЕРТИКАЛЬНОГО */
