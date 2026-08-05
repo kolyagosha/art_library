@@ -1362,11 +1362,7 @@ html {
 /* ======================================================= */
 .video-container-vertical {
     position: relative;
-    width: 100%;
-    max-width: 600px;
-
-    /* НОВОЕ: ограничиваем по высоте видимой области, а не жёстко по ширине */
-    max-height: 95vh; 
+    width: min(700px, calc(92vh * 9 / 16), 90%);
     aspect-ratio: 9 / 16;
 
     margin: 30px auto;
@@ -1390,7 +1386,7 @@ html {
 /* АДАПТИВНІСТЬ ДЛЯ ВЕРТИКАЛЬНОГО */
 @media (max-width: 768px) {
     .video-container-vertical {
-        max-width: 85%; /* На телефонах і планшетах трохи ширше */
+        width: min(700px, calc(92vh * 9 / 16), 85%);
         border-width: 3px;
     }
 }
