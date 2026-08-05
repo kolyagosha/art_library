@@ -1362,7 +1362,7 @@ html {
 /* ======================================================= */
 .video-container-vertical {
     position: relative;
-    width: min(700px, calc(92vh * 9 / 16), 90%);
+    width: min(1000px, calc(92vh * 9 / 16), 90%);
     aspect-ratio: 9 / 16;
 
     margin: 30px auto;
