@@ -1366,7 +1366,7 @@ html {
     width: 100%;
     /* Если хочешь, чтобы он тянулся сильнее, увеличивай max-width. 
        Для вертикального видео на весь экран можно поставить хоть 600px или 800px */
-    max-width: 600px; 
+    max-width: 500px; 
     aspect-ratio: 9 / 16;
     margin: 30px auto;
     border: 5px solid rgba(255, 255, 255, 0.1);
